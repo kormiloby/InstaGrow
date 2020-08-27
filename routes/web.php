@@ -20,6 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/test', 'HomeController@test');
+
 
 Route::middleware('auth')->get('/user', function (Request $request) {
     return "test";
